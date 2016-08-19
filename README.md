@@ -11,7 +11,9 @@ Fans Framework 开源移动电商框架
    * mysql
    * redis
    
-   
+## 前端实现：
+   * react
+
 ## 框架定位：
     1.更好提供HTTP服务或微服务架构
     2.提供常用组件或中间件优化效率
