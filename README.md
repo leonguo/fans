@@ -6,7 +6,7 @@ Fans Framework 开源移动电商框架
 ## 框架实现：
    * php7
    * phalcon3.0+
-   * go1.6
+   * go1.7
    * swoole
    * mysql
    * redis
