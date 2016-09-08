@@ -10,4 +10,9 @@ $app->get('/', function () {
     echo "hello world!";
 });
 
+$app->get('/test', function () {
+    echo "hello world! test";
+});
+
+
 $app->handle();
