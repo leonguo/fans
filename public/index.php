@@ -6,13 +6,15 @@
  */
 $app = new \Phalcon\Mvc\Micro();
 
-$app->get('/', function () {
-    echo "hello world!";
-});
 
-$app->get('/test', function () {
-    echo "hello world! test";
-});
+$di = new \Phalcon\Di();
 
+$di->set("router",
+    function () {
+        $router = require __DIR__ . "/../apps/admin/config/routes.php";
+        return $router;
+    });
+
+$app->setDI($di);
 
 $app->handle();
