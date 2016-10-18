@@ -5,13 +5,13 @@ Fans Framework 开源移动电商框架
 
 ## 框架实现：
    * php7
-   * swoole
+   * php-phalcon3.0
    * go1.7
    * mysql
    * redis
    
 ## 前端实现：
-   * react
+   * 
 
 ## 框架定位：
     1.更好提供HTTP，tcp服务和微服务架构
@@ -25,4 +25,3 @@ Fans Framework 开源移动电商框架
     5.socket,websocket长连接服务
     6.其它常用服务
 
-  
