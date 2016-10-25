@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
+define('API_PATH', APP_PATH . '/apis');
 
 try {
 
@@ -14,6 +15,22 @@ try {
      * provide a full stack framework. These default services can be overidden with custom ones.
      */
     $di = new FactoryDefault();
+
+    /**
+     * 加载配置文件
+     */
+
+    /**
+     * 加载autoload
+     */
+
+    /**
+     * DI初始化
+     */
+
+    /**
+     * autoload加载
+     */
 
     /**
      * Handle the request
