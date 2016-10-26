@@ -6,4 +6,5 @@
  */
 
 return new \Phalcon\Config([
+    'api_name'=>"app-name"
 ]);

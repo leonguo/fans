@@ -8,6 +8,9 @@ define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
 define('API_PATH', APP_PATH . '/apis');
 
+//加载接口初始文件
+
+
 try {
 
     /**
@@ -19,6 +22,7 @@ try {
     /**
      * 加载配置文件
      */
+    include API_PATH.'/config/config.php';
 
     /**
      * 加载autoload
@@ -35,7 +39,7 @@ try {
     /**
      * Handle the request
      */
-    $application = new \Phalcon\Mvc\Micro($di);
+    $app = new \Phalcon\Mvc\Micro($di);
 
     $app->options('/([a-z0-9/]+)', function()
     {
