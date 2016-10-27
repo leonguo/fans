@@ -5,11 +5,11 @@
  * Time: 17:43
  */
 
-namespace Fans\Modules\Api\Controller;
+namespace Fans\Api\Controllers;
 
-use \Phalcon\Di\Injectable;
+use Phalcon\Mvc\Controller;
 
-class ControllerBase extends Injectable
+class ControllerBase extends Controller
 {
-
+    
 }

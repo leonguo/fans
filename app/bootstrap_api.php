@@ -14,27 +14,24 @@ define('API_PATH', APP_PATH . '/apis');
 try {
 
     /**
-     * The FactoryDefault Dependency Injector automatically registers the services that
-     * provide a full stack framework. These default services can be overidden with custom ones.
+     * DI初始化
      */
     $di = new FactoryDefault();
 
     /**
      * 加载配置文件
      */
-    include API_PATH.'/config/config.php';
+    $config = include API_PATH.'/config/config.php';
 
     /**
      * 加载autoload
      */
+    include API_PATH.'/config/loader.php';
 
     /**
-     * DI初始化
+     * DI容器加载
      */
-
-    /**
-     * autoload加载
-     */
+    include API_PATH.'/config/services.php';
 
     /**
      * Handle the request

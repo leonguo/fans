@@ -6,5 +6,9 @@
  */
 
 return new \Phalcon\Config([
-    'api_name'=>"app-name"
+    'api_name' => "app-name",
+    "application" => [
+        'Controllers' => API_PATH.'/controllers',
+        'Models' => API_PATH.'/models'
+    ],
 ]);
