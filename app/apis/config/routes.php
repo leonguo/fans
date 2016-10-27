@@ -26,6 +26,3 @@ $users->get("/show/{slug}", "show");
 $users->post("/pong}", "postPong");
 
 $app->mount($users);
-
-
-//
