@@ -9,7 +9,7 @@ define('APP_PATH', BASE_PATH . '/app');
 define('API_PATH', APP_PATH . '/apis');
 
 //加载接口初始文件
-
+include APP_PATH.'/common/utils/JsonResponse.php';
 
 try {
 
@@ -37,6 +37,10 @@ try {
      * Handle the request
      */
     $app = new \Phalcon\Mvc\Micro($di);
+
+    $app->get('/',function (){
+        echo "hello fans";
+    });
 
     /**
      * 加载路由

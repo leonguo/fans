@@ -9,9 +9,11 @@ use Fans\Api\Controllers\UsersController;
 
 $users = new MicroCollection();
 
+$users->setLazy(true);
+
 // 设置主处理器，这里是控制器的实例
 $users->setHandler(
-    new UsersController(),true
+    new UsersController()
 );
 
 // 对所有路由设置前缀
@@ -23,6 +25,6 @@ $users->get("/", "getPing");
 // 使用UsersController中的show action
 $users->get("/show/{slug}", "show");
 
-$users->post("/pong}", "postPong");
+$users->post("/pong", "postPong");
 
 $app->mount($users);

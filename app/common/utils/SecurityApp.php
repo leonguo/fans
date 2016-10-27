@@ -5,9 +5,7 @@
  * Time: 19:31
  */
 
-namespace App\Security;
-
-use App\Exceptions\HTTPException;
+namespace Fans\Common\Utils;
 
 class SecurityApp
 {
@@ -23,7 +21,7 @@ class SecurityApp
             }
         }
         //user authentication logic here
-        throw new HTTPException(
+        throw new \HttpException(
             'Your not allowed!.',
             401,
             array(

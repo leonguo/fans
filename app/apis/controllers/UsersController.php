@@ -6,6 +6,8 @@
  */
 namespace Fans\Api\Controllers;
 
+use Fans\Common\Utils\JsonResponse;
+
 class UsersController extends ControllerBase
 {
 
@@ -21,6 +23,6 @@ class UsersController extends ControllerBase
 
     public function show($slug)
     {
-        echo $slug;
+        return JsonResponse::make(['data'=>$slug]);
     }
 }
