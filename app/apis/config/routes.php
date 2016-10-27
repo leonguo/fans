@@ -10,8 +10,8 @@ use Fans\Api\Controllers\UsersController;
 $users = new MicroCollection();
 
 // 设置主处理器，这里是控制器的实例
-$posts->setHandler(
-    new UsersController()
+$users->setHandler(
+    new UsersController(),true
 );
 
 // 对所有路由设置前缀
@@ -26,3 +26,6 @@ $users->get("/show/{slug}", "show");
 $users->post("/pong}", "postPong");
 
 $app->mount($users);
+
+
+//

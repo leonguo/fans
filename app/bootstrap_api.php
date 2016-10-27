@@ -38,6 +38,11 @@ try {
      */
     $app = new \Phalcon\Mvc\Micro($di);
 
+    /**
+     * 加载路由
+     */
+    include API_PATH.'/config/router.php';
+
     $app->options('/([a-z0-9/]+)', function()
     {
         $response = new Response();
