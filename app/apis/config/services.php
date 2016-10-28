@@ -9,7 +9,7 @@ $di->set('config',$config,true);
 
 $di->setShared('mongo', function () {
     $mongo = new \MongoDB\Client('mongodb://localhost:27017');
-    return $mongo->selectDB('test');
+    return $mongo->selectDatabase('test');
 });
 
 $di->set('collectionManager',function () {
