@@ -11,6 +11,7 @@ $loader->registerNamespaces([
     'Fans\Api\Controllers' => $config->application->Controllers,
     'Fans\Api\Models' => $config->application->Models,
     'Fans\Common\Utils' => $config->application->Utils,
+    'Fans\Common\Collections' => $config->application->Collections,
 ]);
 
 $loader->register();

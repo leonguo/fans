@@ -6,6 +6,7 @@
  */
 namespace Fans\Api\Controllers;
 
+use Fans\Common\Collections\TestCollection;
 use Fans\Common\Utils\JsonResponse;
 
 class UsersController extends ControllerBase
@@ -13,6 +14,8 @@ class UsersController extends ControllerBase
 
     public function getPing()
     {
+        $data = TestCollection::findFirst();
+        var_dump($data);
         echo 'pong';
     }
 
