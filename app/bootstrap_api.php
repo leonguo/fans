@@ -10,6 +10,7 @@ define('API_PATH', APP_PATH . '/apis');
 
 //加载接口初始文件
 include APP_PATH.'/common/utils/JsonResponse.php';
+include BASE_PATH . "/vendor/autoload.php";
 
 try {
 
