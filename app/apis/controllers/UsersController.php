@@ -14,12 +14,20 @@ class UsersController extends ControllerBase
 
     public function getPing()
     {
-//         TestCollection::findFirst();
-        $db = new \MongoDB\Client();
-        $test = $db->selectDatabase('test')->selectCollection('test');
-        $test->insertOne(['title'=>'gxj']);
-        $data = $test->findOne(['title'=>'gxj']);
-        var_dump($data);
+
+//        $test = new TestCollection();
+//        $test->title="dad";
+//        $test->save();
+
+//        $data = TestCollection::findFirst();
+//        var_dump($data->title);
+//        var_dump($data->toArray());
+
+        $all = TestCollection::find();
+        foreach ($all as $item){
+            var_dump($item->toArray());
+            echo '<br>';
+        }
         echo 'pong';
     }
 

@@ -13,4 +13,10 @@ return new \Phalcon\Config([
         'Utils' => APP_PATH.'/common/utils',
         'Collections' => APP_PATH.'/common/collections'
     ],
+    "database" => [
+        'mongo' =>[
+            'host'=>'127.0.0.1',
+            'dbname'=>'test'
+        ]
+    ]
 ]);

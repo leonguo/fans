@@ -6,12 +6,14 @@
  */
 namespace Fans\Common\Collections;
 
-use Phalcon\Mvc\Collection;
+use Phalcon\Mvc\MongoCollection;
 
-class TestCollection extends Collection
+class TestCollection extends MongoCollection
 {
-   public function initialize()
-   {
-        $this->setSource('test');
-   }
+    public $title;
+
+    public function getSource()
+    {
+        return 'test';
+    }
 }

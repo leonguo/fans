@@ -8,8 +8,16 @@
 $di->set('config',$config,true);
 
 $di->setShared('mongo', function () {
-    $mongo = new \MongoDB\Client('mongodb://localhost:27017');
-    return $mongo->selectDatabase('test');
+    $config = $this->getShared('config');
+    if (!$config->database->mongo->username || !$config->database->mongo->password) {
+        $dsn = "mongodb://" . $config->database->mongo->host;
+    } else {
+        $dsn = sprintf(
+            "mongodb://%s:%s@%s",$config->database->mongo->username, $config->database->mongo->password, $config->database->mongo->host
+        );
+    }
+    $mongo = new \Phalcon\Db\Adapter\MongoDB\Client($dsn);
+    return $mongo->selectDatabase($config->database->mongo->dbname);
 });
 
 $di->set('collectionManager',function () {
