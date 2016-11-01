@@ -25,9 +25,12 @@ class UsersController extends ControllerBase
 
         $all = TestCollection::find();
         foreach ($all as $item){
-            var_dump($item->toArray());
+//            var_dump($item->toArray());
             echo '<br>';
         }
+
+        $collection = new TestCollection();
+        var_dump($collection->getOne());
         echo 'pong';
     }
 

@@ -16,4 +16,10 @@ class TestCollection extends MongoCollection
     {
         return 'test';
     }
+
+    public function getOne()
+    {
+        $collection = $this->getConnection()->selectCollection('test');
+        return $collection->findOne();
+    }
 }

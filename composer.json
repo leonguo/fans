@@ -1,6 +1,7 @@
 {
   "require": {
     "mongodb/mongodb": "^1.0.0",
-    "phalcon/incubator": "~3.0"
+    "phalcon/incubator": "~3.0",
+    "phpunit/phpunit": "^5.6"
   }
 }
