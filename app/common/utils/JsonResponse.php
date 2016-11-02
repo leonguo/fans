@@ -16,11 +16,6 @@ class JsonResponse{
             'status_message' => self::getResponseDescription($code),
             'result' => $result
         ];
-        if (is_array($result)) {
-            $responseArray['count'] = count($result);
-        } else if (is_object($result)) {
-            $responseArray['count'] = 1;
-        }
         $response = new Response();
         $response->setJsonContent($responseArray);
         $response->setStatusCode($code);
