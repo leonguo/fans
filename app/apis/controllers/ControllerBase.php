@@ -9,6 +9,9 @@ namespace Fans\Api\Controllers;
 
 use Phalcon\Mvc\Controller;
 
+/**
+ * @SWG\Info(title="FANS-API-DOCS", version="0.1")
+ */
 class ControllerBase extends Controller
 {
     

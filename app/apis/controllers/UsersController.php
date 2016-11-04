@@ -11,7 +11,12 @@ use Fans\Common\Utils\JsonResponse;
 
 class UsersController extends ControllerBase
 {
-
+    /**
+     * @SWG\Get(
+     *     path="/users",
+     *     @SWG\Response(response="200", description="An example resource")
+     * )
+     */
     public function getPing()
     {
 
@@ -24,21 +29,30 @@ class UsersController extends ControllerBase
 //        var_dump($data->toArray());
 
         $all = TestCollection::find();
-        foreach ($all as $item){
-//            var_dump($item->toArray());
-            echo '<br>';
-        }
 
         $collection = new TestCollection();
-        var_dump($collection->getOne());
-        echo 'pong';
+        $data = $collection->getOne();
+//        $data = \MongoDB\BSON\toJSON();
+        JsonResponse::make(['dada'=>2314]);
     }
 
+    /**
+     * @SWG\Post(
+     *     path="/users/pong",
+     *     @SWG\Response(response="200", description="An example resource")
+     * )
+     */
     public function postPong()
     {
         echo 'ping';
     }
 
+    /**
+     * @SWG\Get(
+     *     path="/users/show/",
+     *     @SWG\Response(response="200", description="An example resource")
+     * )
+     */
     public function show($slug)
     {
         return JsonResponse::make(['data'=>$slug]);
