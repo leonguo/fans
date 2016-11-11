@@ -1,4 +1,4 @@
-Fans Framework 开源移动电商框架
+Fans Framework 开源移动框架
 ========
 
 ## 目标：
@@ -9,6 +9,7 @@ Fans Framework 开源移动电商框架
    * go1.7
    * mysql
    * redis
+   * mongodb
    
 ## 前端实现：
    * 
