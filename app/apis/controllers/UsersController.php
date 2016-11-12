@@ -14,10 +14,42 @@ class UsersController extends ControllerBase
     /**
      * @SWG\Get(
      *     path="/users",
-     *     @SWG\Response(response="200", description="An example resource")
+     *     tags={"user"},
+     *     summary="get user",
+     *     escription="获取用户的基本信息",
+     *     operationId="getUsers",
+     *     produces={"application/json","application/xml"},
+     *     @SWG\Parameter(
+     *      name="username",
+     *      in="query",
+     *      description="The username for app ",
+     *      required=false,
+     *      type="string"
+     *     ),
+     *     @SWG\Response(
+     *     response="200",
+     *     description="An example resource",
+     *     @SWG\Schema(type="string"),
+     *     @SWG\Header(
+     *       header="X-Rate-Limit",
+     *       type="integer",
+     *       format="int32",
+     *       description="rate limit"
+     *     ),
+     *     @SWG\Header(
+     *       header="X-Expires-After",
+     *       type="string",
+     *       format="date-time",
+     *       description="date time"
+     *     )),
+     *     security={{
+     *     "api_key":{}
+     *     }}
+     *    @SWG\Response(response=400, description="Invalid username supplied"),
+     *    @SWG\Response(response=404, description="User not found")
      * )
      */
-    public function getPing()
+    public function getUsers($username)
     {
 
 //        $test = new TestCollection();
@@ -33,7 +65,8 @@ class UsersController extends ControllerBase
         $collection = new TestCollection();
         $data = $collection->getOne();
 //        $data = \MongoDB\BSON\toJSON();
-        JsonResponse::make(['dada'=>2314]);
+//        JsonResponse::make(['dada'=>2314]);
+        return $this->response->appendContent(['code'=>0]);
     }
 
     /**

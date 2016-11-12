@@ -20,7 +20,7 @@ $users->setHandler(
 $users->setPrefix("/users");
 
 //  使用UsersController中的index action
-$users->get("/", "getPing");
+$users->get("/{username}", "getUsers");
 
 // 使用UsersController中的show action
 $users->get("/show/{slug}", "show");
