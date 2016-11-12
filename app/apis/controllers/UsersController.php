@@ -42,11 +42,11 @@ class UsersController extends ControllerBase
      *       format="date-time",
      *       description="date time"
      *     )),
-     *     security={{
-     *     "api_key":{}
-     *     }}
      *    @SWG\Response(response=400, description="Invalid username supplied"),
-     *    @SWG\Response(response=404, description="User not found")
+     *    @SWG\Response(response=404, description="User not found"),
+     *    security={{
+     *     "api_key":{}
+     *    }}
      * )
      */
     public function getUsers($username)
@@ -66,7 +66,7 @@ class UsersController extends ControllerBase
         $data = $collection->getOne();
 //        $data = \MongoDB\BSON\toJSON();
 //        JsonResponse::make(['dada'=>2314]);
-        return $this->response->appendContent(['code'=>0]);
+        return $this->response->setJsonContent(['code'=>200,'username'=>$username]);
     }
 
     /**
