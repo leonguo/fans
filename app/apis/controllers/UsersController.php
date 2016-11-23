@@ -64,9 +64,7 @@ class UsersController extends ControllerBase
 
         $collection = new TestCollection();
         $data = $collection->getOne();
-//        $data = \MongoDB\BSON\toJSON();
-//        JsonResponse::make(['dada'=>2314]);
-        return $this->response->setJsonContent(['code'=>200,'username'=>$username]);
+        return JsonResponse::make(['ggg']);
     }
 
     /**
