@@ -7,5 +7,8 @@
 
 class UserModel extends \Phalcon\Mvc\Model
 {
+    public $username;
+
+    public $password;
 
 }
