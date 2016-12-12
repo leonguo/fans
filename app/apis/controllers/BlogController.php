@@ -50,6 +50,13 @@ class BlogController extends ControllerBase
      */
     public function getBlogs()
     {
+
+        return JsonResponse::make(['ggg']);
+    }
+
+    public function createBlog()
+    {
+
         return JsonResponse::make(['ggg']);
     }
 }
